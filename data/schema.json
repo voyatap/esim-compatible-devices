@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/voyatap/esim-compatible-devices/blob/main/data/schema.json",
+  "title": "VoyaTap eSIM Device Compatibility Dataset",
+  "type": "object",
+  "required": [
+    "dataset",
+    "publisher",
+    "source_url",
+    "license",
+    "published",
+    "last_verified",
+    "total_devices",
+    "brands",
+    "devices"
+  ],
+  "properties": {
+    "dataset": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string",
+      "const": "VoyaTap"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "license": {
+      "type": "string",
+      "const": "CC-BY-4.0"
+    },
+    "published": {
+      "type": "string",
+      "format": "date"
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date"
+    },
+    "total_devices": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "brands": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "brand",
+          "model",
+          "slug",
+          "category",
+          "year",
+          "esim_supported",
+          "travel_esim_usable",
+          "esim_slots",
+          "physical_sim",
+          "dual_sim",
+          "notes_en",
+          "notes_zh",
+          "source_url",
+          "voyatap_url"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "brand": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "phone",
+              "tablet",
+              "wearable"
+            ]
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 2017
+          },
+          "esim_supported": {
+            "type": "boolean"
+          },
+          "travel_esim_usable": {
+            "type": "boolean"
+          },
+          "esim_slots": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "physical_sim": {
+            "type": "boolean"
+          },
+          "dual_sim": {
+            "type": "boolean"
+          },
+          "notes_en": {
+            "type": "string"
+          },
+          "notes_zh": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "voyatap_url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}
