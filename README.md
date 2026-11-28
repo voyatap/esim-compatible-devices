@@ -1,41 +1,41 @@
 # eSIM Compatible Devices Dataset (VoyaTap)
 
-An open, manufacturer-verified dataset of **265 phones, tablets, and smartwatches across 15 brands**, maintained by [VoyaTap](https://voyatap.com/en) and published under **CC BY 4.0**.
+An open, manufacturer-verified dataset of **304 phones, tablets, and smartwatches across 15 brands**, maintained by [VoyaTap](https://voyatap.com/en) and published under **CC BY 4.0**.
 
 - **Interactive web directory**: [https://voyatap.com/en/devices](https://voyatap.com/en/devices)
 - **Interactive eSIM compatibility checker**: [https://voyatap.com/en/tools/esim-checker](https://voyatap.com/en/tools/esim-checker)
 - **Machine-readable files**: [`data/devices.json`](./data/devices.json) · [`data/devices.csv`](./data/devices.csv) · [`data/schema.json`](./data/schema.json)
-- **First published**: 2026-04-12 · **Last verified**: 2026-09-14
+- **First published**: 2026-04-12 · **Last verified**: 2026-11-28
 
 ## Why this dataset exists
 
 Many third-party compatibility tables silently copy outdated lists and mislabel incompatible phones or regional hardware variants. This dataset includes:
 
-1. **Honest negative entries (30 models with `esim_supported: false`)** — devices frequently misreported elsewhere as eSIM-compatible (such as Huawei Mate 60 Pro, Xiaomi 14 Ultra, ASUS ROG Phone 8, Nothing Phone (2), Galaxy Tab S8, and Garmin watches).
-2. **Travel eSIM usability (`travel_esim_usable`)** — explicitly distinguishes cellular smartwatches (which carry carrier-locked eSIMs and cannot install third-party travel data profiles) from phones and cellular tablets (**219** travel-eSIM-usable models out of **235** hardware-eSIM models).
+1. **Honest negative entries (35 models with `esim_supported: false`)** — devices frequently misreported elsewhere as eSIM-compatible (such as Huawei Mate 60 Pro, Xiaomi 14 Ultra, ASUS ROG Phone 8, Nothing Phone (2), Galaxy Tab S8, and Garmin watches).
+2. **Travel eSIM usability (`travel_esim_usable`)** — explicitly distinguishes cellular smartwatches (which carry carrier-locked eSIMs and cannot install third-party travel data profiles) from phones and cellular tablets (**252** travel-eSIM-usable models out of **269** hardware-eSIM models).
 3. **Regional hardware caveats (English + Simplified Chinese)** — documents mainland-China dual-physical-SIM variants, US and 12-region eSIM-only iPhones, and cellular-only tablets.
 
 ## Brand summary
 
 | Brand | Total models | eSIM hardware | Honest `no eSIM` |
 | --- | ---: | ---: | ---: |
-| [Apple](https://voyatap.com/en/devices#apple) | 69 | 69 | 0 |
-| [Samsung](https://voyatap.com/en/devices#samsung) | 67 | 64 | 3 |
-| [Google](https://voyatap.com/en/devices#google) | 33 | 33 | 0 |
-| [OnePlus](https://voyatap.com/en/devices#oneplus) | 8 | 7 | 1 |
-| [Xiaomi](https://voyatap.com/en/devices#xiaomi) | 15 | 10 | 5 |
-| [OPPO](https://voyatap.com/en/devices#oppo) | 13 | 10 | 3 |
-| [Motorola](https://voyatap.com/en/devices#motorola) | 13 | 13 | 0 |
-| [Sony](https://voyatap.com/en/devices#sony) | 6 | 6 | 0 |
-| [Nothing](https://voyatap.com/en/devices#nothing) | 7 | 3 | 4 |
-| [Honor](https://voyatap.com/en/devices#honor) | 7 | 7 | 0 |
-| [Huawei](https://voyatap.com/en/devices#huawei) | 5 | 1 | 4 |
+| [Apple](https://voyatap.com/en/devices#apple) | 70 | 70 | 0 |
+| [Samsung](https://voyatap.com/en/devices#samsung) | 71 | 68 | 3 |
+| [Google](https://voyatap.com/en/devices#google) | 38 | 38 | 0 |
+| [OnePlus](https://voyatap.com/en/devices#oneplus) | 9 | 8 | 1 |
+| [Xiaomi](https://voyatap.com/en/devices#xiaomi) | 18 | 13 | 5 |
+| [OPPO](https://voyatap.com/en/devices#oppo) | 18 | 15 | 3 |
+| [Motorola](https://voyatap.com/en/devices#motorola) | 17 | 17 | 0 |
+| [Sony](https://voyatap.com/en/devices#sony) | 8 | 8 | 0 |
+| [Nothing](https://voyatap.com/en/devices#nothing) | 9 | 3 | 6 |
+| [Honor](https://voyatap.com/en/devices#honor) | 9 | 9 | 0 |
+| [Huawei](https://voyatap.com/en/devices#huawei) | 8 | 4 | 4 |
 | [ASUS](https://voyatap.com/en/devices#asus) | 7 | 3 | 4 |
-| [vivo](https://voyatap.com/en/devices#vivo) | 7 | 6 | 1 |
+| [vivo](https://voyatap.com/en/devices#vivo) | 11 | 10 | 1 |
 | [Microsoft](https://voyatap.com/en/devices#microsoft) | 3 | 3 | 0 |
-| [Garmin](https://voyatap.com/en/devices#garmin) | 5 | 0 | 5 |
+| [Garmin](https://voyatap.com/en/devices#garmin) | 8 | 0 | 8 |
 
-## Models verified as NOT supporting eSIM (30)
+## Models verified as NOT supporting eSIM (35)
 
 | Brand | Model | Year | Category | Verification note |
 | --- | --- | ---: | --- | --- |
@@ -51,6 +51,8 @@ Many third-party compatibility tables silently copy outdated lists and mislabel 
 | OPPO | [Find X8 Ultra](https://voyatap.com/en/devices/oppo-find-x8-ultra) | 2025 | phone | China-only model; no standard eSIM (OPPO's ORoaming app cannot install third-party travel eSIM profiles). |
 | OPPO | [Reno 12 Pro 5G](https://voyatap.com/en/devices/oppo-reno-12-pro-5g) | 2024 | phone | Dual physical nano-SIM only — the Reno 12 generation skipped eSIM (it returned on Reno 13/14). |
 | OPPO | [Reno 12 5G](https://voyatap.com/en/devices/oppo-reno-12-5g) | 2024 | phone | Dual physical nano-SIM only — the Reno 12 generation skipped eSIM (it returned on Reno 13/14). |
+| Nothing | [Phone (4b)](https://voyatap.com/en/devices/nothing-phone-4b) | 2026 | phone | Dual physical nano-SIM only — no eSIM in any region. |
+| Nothing | [Phone (4a)](https://voyatap.com/en/devices/nothing-phone-4a) | 2026 | phone | Dual physical nano-SIM only — no eSIM in any region. Only the Phone (4a) Pro supports eSIM. |
 | Nothing | [Phone (2a) Plus](https://voyatap.com/en/devices/nothing-phone-2a-plus) | 2024 | phone | Dual physical nano-SIM only — no eSIM in any region. |
 | Nothing | [Phone (2a)](https://voyatap.com/en/devices/nothing-phone-2a) | 2024 | phone | Dual physical nano-SIM only — no eSIM in any region. |
 | Nothing | [Phone (2)](https://voyatap.com/en/devices/nothing-phone-2) | 2023 | phone | Dual physical nano-SIM only — no eSIM in any region (confirmed by Nothing's official support pages). |
@@ -64,6 +66,9 @@ Many third-party compatibility tables silently copy outdated lists and mislabel 
 | ASUS | [Zenfone 11 Ultra](https://voyatap.com/en/devices/asus-zenfone-11-ultra) | 2024 | phone | Dual physical nano-SIM only — no eSIM. ASUS's first eSIM phones are the ROG Phone 9 series and Zenfone 12 Ultra. |
 | ASUS | [Zenfone 10](https://voyatap.com/en/devices/asus-zenfone-10) | 2023 | phone | Dual physical nano-SIM only — no eSIM. ASUS's first eSIM phones are the ROG Phone 9 series and Zenfone 12 Ultra. |
 | vivo | [X Fold 3 Pro](https://voyatap.com/en/devices/vivo-x-fold-3-pro) | 2024 | phone | No eSIM on any variant (dual physical nano-SIM), including the global/India version. |
+| Garmin | [Fenix 9 Pro](https://voyatap.com/en/devices/garmin-fenix-9-pro) | 2026 | wearable | Carries LTE-M and inReach satellite connectivity, but the embedded SIM is locked to Garmin's own subscription plan — no carrier or travel eSIM profile can be installed. |
+| Garmin | [Fenix 9](https://voyatap.com/en/devices/garmin-fenix-9) | 2026 | wearable | No cellular radio at all — LTE-M/inReach is exclusive to the Pro models (and still locked to Garmin's own subscription). Connects through a paired phone. |
+| Garmin | [Forerunner 970](https://voyatap.com/en/devices/garmin-forerunner-970) | 2025 | wearable | No cellular radio and no eSIM — connects through a paired phone for calls, texts, and data. |
 | Garmin | [Fenix 8 Pro](https://voyatap.com/en/devices/garmin-fenix-8-pro) | 2025 | wearable | Garmin's first watch with cellular (LTE) alongside inReach satellite messaging — but the embedded SIM is tied to Garmin's own subscription, activated in Garmin Connect. No carrier or travel eSIM profile can be installed, and Garmin sells the service in a limited list of countries. |
 | Garmin | [Forerunner 945 LTE](https://voyatap.com/en/devices/garmin-forerunner-945-lte) | 2021 | wearable | The LTE here is Garmin's own subscription service activated through Garmin Connect, not a carrier eSIM — travel eSIMs cannot be installed. Availability is limited to the countries Garmin lists for the service. |
 | Garmin | [Fenix 8](https://voyatap.com/en/devices/garmin-fenix-8) | 2024 | wearable | No cellular radio at all — Garmin's first watches with cellular are the fēnix 8 Pro series (2025). Connectivity comes from a paired phone. |
@@ -72,7 +77,7 @@ Many third-party compatibility tables silently copy outdated lists and mislabel 
 
 ## Files & schema
 
-- `data/devices.json` — structured JSON object with dataset metadata and all 265 entries.
+- `data/devices.json` — structured JSON object with dataset metadata and all 304 entries.
 - `data/devices.csv` — flat RFC 4180 CSV table for spreadsheets, pandas, DuckDB, or SQL imports.
 - `data/schema.json` — JSON Schema (Draft 2020-12) validating `data/devices.json`.
 
@@ -88,6 +93,7 @@ Every record includes a canonical `voyatap_url` linking directly to that model's
 
 ## Changelog
 
+- **2026-11-28**: Added 39 devices released through Nov 2026 across 13 brands: Google Pixel 11 / 11 Pro / 11 Pro XL / 11 Pro Fold (US models eSIM-only across all four, including the Fold for the first time) and Pixel Watch 5; Apple iPad mini (A20 Pro); Samsung Galaxy S26 FE, Galaxy Z TriFold, and Galaxy Tab S12+ / S12 Ultra 5G; Xiaomi 18 Pro / 18 Pro Max (Nov Paris global launch) and 17T; OPPO Find X10 / X10 Pro Max, Find X9 Ultra (global), and Reno 15 / 15 Pro 5G; vivo X500 Pro / Pro Max, X300 Ultra (global), and X Fold 6; Honor Magic 9 Pro Max and Magic V6; Huawei Pura 90s Pro / Pro Max and Mate 80 Pro (global variants); OnePlus 15T; Sony Xperia 1 VIII and 10 VIII; Motorola Razr / Razr+ (2026) and Edge 70 / 70 Pro; plus 5 honest "no eSIM" entries (Nothing Phone (4a) and (4b), Garmin Fenix 9, Fenix 9 Pro, and Forerunner 970). China-only launches whose global specs are not yet published (OnePlus 16, Huawei Mate 90) are held until official global spec pages appear.
 - **2026-09-14**: Apple's September 2026 lineup added from Apple's own spec pages: iPhone 18 Pro and 18 Pro Max (eSIM-only in the same 12 countries/regions as the 17 Pro; the mainland-China models A3715/A3718 are the first Pro iPhones with eSIM in China), iPhone Duo (Apple's first foldable, eSIM-only in every market with no SIM tray at all, on sale 23 Oct), Apple Watch Series 12 and Ultra 4. The iPhone Air and 17e entries no longer call themselves the "only two" iPhones with eSIM in China — that stopped being true this month. The non-Pro iPhone 18, 18e and Air 2 are not listed: Apple has them slated for spring 2027 and has published no specs.
 - **2026-08-20**: Tablet and wearable coverage extended, both directions. Added the 11 Galaxy tablets Samsung's own eSIM list names (Tab S11, S10+/S10 Ultra, S10 FE/FE+, S9/S9+/S9 Ultra, S9 FE/FE+, Tab Active5/Active5 Pro) — and, because that list starts at the Tab S9, added Galaxy Tab S8/S8+/S8 Ultra as honest "no eSIM" entries, correcting a claim several third-party lists get wrong. Added 5 Garmin watches, all honest "no": the fēnix 8 Pro and Forerunner 945 LTE do carry an embedded SIM, but it is locked to Garmin's own subscription and no travel eSIM can be written to it; the fēnix 8, Forerunner 965 and 955 have no cellular radio at all. realme and ZTE were researched and deliberately left out — neither publishes an official eSIM device list, and the third-party sources contradict each other.
 - **2026-08-10**: Full re-verification of every entry against manufacturer sources. Added 71 devices released through Aug 2026 (iPhone Air/16e/17e, Pixel 10 series, Galaxy S26 & Z Fold 8 series, Xiaomi 17 series and more). Corrected eSIM-only labeling to be region-accurate (US-only for iPhone 14–16; 12 regions for iPhone 17), dual-eSIM counts (Galaxy S24+, Pixel 7+), and — importantly — 22 entries that do NOT support eSIM (all previous ASUS/Huawei/Nothing listings, several Xiaomi/OPPO models) now say so honestly. Reference-page upgrades (anchors, source links, citation guidance) shipped the same day.
@@ -99,4 +105,4 @@ This dataset is licensed under **Creative Commons Attribution 4.0 International 
 
 You are free to share, copy, and adapt this dataset for any purpose (including commercial tools, articles, and AI applications) provided you give appropriate attribution:
 
-> Data source: VoyaTap eSIM Device Compatibility Database (last verified 2026-09-14), https://voyatap.com/en/devices, licensed under CC BY 4.0.
+> Data source: VoyaTap eSIM Device Compatibility Database (last verified 2026-11-28), https://voyatap.com/en/devices, licensed under CC BY 4.0.
